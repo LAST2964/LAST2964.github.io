@@ -20,7 +20,7 @@ var circleRadius = 10;
 // this gets the whole thing going;
 // it creates a number of circles both in JavaScript and in the HTML of the website
 for (var i = 0; i < maxCircles; i++){
-    var newId = getId[i];
+    var newId = getId(i);
     var newCircle = makeCircle(newId);
     circles.push(newCircle);
     
@@ -63,7 +63,7 @@ function decideSpeed(){
 
 // this generates an id for a circle given the circle's number
 function getId(number){
-    return "circle" + number () ;
+    return "circle" + number;
 }
 
 // this adds a circle into the HTML
