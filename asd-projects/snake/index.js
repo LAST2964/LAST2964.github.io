@@ -159,8 +159,11 @@ function hasCollidedWithApple() {
   
   HINT: Both the apple and the snake's head are aware of their own row and column
   */
-
+ if (snake.head.row + snake.head.column === apple.row + apple.column) {
+  return true;
+ } else {
   return false;
+ }
 }
 
 function handleAppleCollision() {
