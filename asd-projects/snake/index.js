@@ -216,7 +216,7 @@ function handleAppleCollision() {
     column = snake.tail.column - 1;
   }
   makeSnakeSquare(row, column);
-  console.log("Yummy!");
+  //console.log("Yummy!");
 }
 
 function hasCollidedWithSnake() {
@@ -346,11 +346,13 @@ function getRandomAvailablePosition() {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
-    if (randomPosition.column === snake.body.column && randomPosition.row === snake.body.row) {
-      randomPosition.column = Math.floor(Math.random() * COLUMNS);
-      randomPosition.row = Math.floor(Math.random() * ROWS);
+    for (let i = snake.body.length - 1; i >= 1; i--) {
+      if (randomPosition.column === snake.body[i].column && randomPosition.row === snake.body[i].row) {
+        spaceIsAvailable = false;
+      }
     }
     /*
+  
     TODO 13: After generating the random position determine if that position is
     not occupied by a snakeSquare in the snake's body. If it is then set 
     spaceIsAvailable to false so that a new position is generated.
