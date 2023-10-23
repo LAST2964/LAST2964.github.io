@@ -77,11 +77,15 @@ function redrawGameItem() {
   $("#walker").css("top", walker.posY);
 }
 function wallCollision() {
-if (walker.posX <= 0 || walker.posX >= $("#board").width()) {
-  walker.posX *= -1;
+if (walker.posX < 0) {
+  walker.posX = 0;
+} else if (walker.posX > $("#board").width()) {
+  walker.posX = $("#board").width();
 }
-if (walker.posY <= 0 || walker.posY >= $("#board").height()) {
-  walker.posY *= -1;
+if (walker.posY < 0) {
+  walker.posY = 0;
+} else if (walker.posY > $("#board").height()) {
+  walker.posY = $("#board").height();
 }
 }
   function endGame() {
