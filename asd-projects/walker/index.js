@@ -77,10 +77,10 @@ function redrawGameItem() {
   $("#walker").css("top", walker.posY);
 }
 function wallCollision() {
-if (walker.posX < 0 || walker.posX > $("#board").width()) {
+if (walker.posX <= 0 || walker.posX >= $("#board").width()) {
   walker.speedX = 0;
 }
-if (walker.posY < 0 || walker.posY > $("#board").height()) {
+if (walker.posY <= 0 || walker.posY >= $("#board").height()) {
   walker.speedY = 0;
 }
 }
