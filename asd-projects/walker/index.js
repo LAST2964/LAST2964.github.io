@@ -78,10 +78,10 @@ function redrawGameItem() {
 }
 function wallCollision() {
 if (walker.posX <= 0 || walker.posX >= $("#board").width()) {
-  walker.speedX = 0;
+  walker.posX *= -1;
 }
 if (walker.posY <= 0 || walker.posY >= $("#board").height()) {
-  walker.speedY = 0;
+  walker.posY *= -1;
 }
 }
   function endGame() {
