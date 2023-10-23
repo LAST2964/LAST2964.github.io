@@ -346,7 +346,10 @@ function getRandomAvailablePosition() {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
-
+    if (randomPosition.column === snake.body.column && randomPosition.row === snake.body.row) {
+      randomPosition.column = Math.floor(Math.random() * COLUMNS);
+      randomPosition.row = Math.floor(Math.random() * ROWS);
+    }
     /*
     TODO 13: After generating the random position determine if that position is
     not occupied by a snakeSquare in the snake's body. If it is then set 
