@@ -38,8 +38,7 @@ var row = image[r];
   for (let c = image[r]; c < row.length; c++) {
     //inside each row
     var rgbString = image[r][c];
-    var rgbNumbers;
-    rgbStringToArray(rgbString);
+    var rgbNumbers = rgbStringToArray(rgbString);
     rgbNumbers[RED] = 255;
     rgbNumbers[GREEN] = 255;
     rgbNumbers[BLUE] = 255;
