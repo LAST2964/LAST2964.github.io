@@ -36,7 +36,15 @@ function applyFilter() {
 for (let r = 0; r < image.length; r++) {
 var row = image[r];
   for (let c = image[r]; c < row.length; c++) {
-    //column loop
+    //inside each row
+    var rgbString = image[r][c];
+    var rgbNumbers;
+    rgbStringToArray(rgbString);
+    rgbNumbers[RED] = 255;
+    rgbNumbers[GREEN] = 255;
+    rgbNumbers[BLUE] = 255;
+    rgbString = rgbArrayToString(rgbNumbers);
+    image[r][c] = rgbString;
   }
   //row loop
 }
