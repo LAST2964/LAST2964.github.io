@@ -35,7 +35,7 @@ applyFilter();
 function applyFilter() {
 for (let r = 0; r < image.length; r++) {
 var row = image[r];
-  for (let c = image[r]; c < row.length; c++) {
+  for (let c = 0; c < row.length; c++) {
     //inside each row
     var rgbString = image[r][c];
     var rgbNumbers = rgbStringToArray(rgbString);
