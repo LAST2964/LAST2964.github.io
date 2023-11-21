@@ -50,14 +50,12 @@ var row = image[r];
 }
 
 // TODO 7: Create the applyFilterNoBackground function
-
+function applyFilterNoBackground()
 
 // TODO 5: Create the keepInBounds function
 function keepInBounds(num) {
-  num < 0 ? num = 0
-  : num > 255 ? num = 255
-  : num = num;
-return num;
+  num = num < 0 ? 0 : num > 255 ? 255 : num
+  return num;
 }
 // TODO 3: Create reddify function
 function reddify(arr) {
