@@ -60,9 +60,9 @@ function applyFilterNoBackground(filterFunction) {
       var rgbNumbers = rgbStringToArray(rgbString);
       if(image[r][c] != background) {
         filterFunction(rgbNumbers);
+        rgbString = rgbArrayToString(rgbNumbers);
+        image[r][c] = rgbString;
       }
-      rgbString = rgbArrayToString(rgbNumbers);
-      image[r][c] = rgbString;
     }
     //row loop
   }
