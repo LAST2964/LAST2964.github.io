@@ -15,9 +15,6 @@ The CSS ids you will work with are:
 
 // TODO 2: Implement bubbleSort
 async function bubbleSort (array) {
-    var sorted = false;
-    while (!sorted) {
-        sorted = true;
         for (var i = 0; i <= arr.length - 1; i++) {
             for (var j = arr.length - 1; j <= i + 1; j++) {
                 if (arr[j] < arr[j - 1]) {
@@ -27,8 +24,6 @@ async function bubbleSort (array) {
                 }
             }
     }
-}
-
 // TODO 3: Implement quickSort
 
 
