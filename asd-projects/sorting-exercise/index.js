@@ -48,11 +48,11 @@ function partition (array, left, right) {
         while (array[right] > pivot) {
             right--
         }
-        if (left < right) {
+        if (left.value < right.value) {
             swap(left, right, array);
         }
-        return(left + 1);
     }
+    return(left + 1);
 }
 // TODO 1: Implement swap
 function swap(i, j, array) {
