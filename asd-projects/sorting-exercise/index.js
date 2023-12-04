@@ -48,8 +48,8 @@ async function partition (array, left, right) {
         while (array[right].value > pivot) {
             right--
         }
-        if (array[left].value < array[right].value) {
-            swap(array, left, right);
+        if (left < right) {
+            swap(left, right, array);
             updateCounter(quickCounter);
             await sleep();
         }
